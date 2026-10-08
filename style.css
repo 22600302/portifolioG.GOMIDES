@@ -1,0 +1,256 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, a, button, span, div, p {
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 60px;
+}
+
+.titulo {
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  color: var(--cor-titulo);
+}
+
+.icone {
+  font-style: italic;
+  font-weight: 900;
+}
+
+.menu2 {
+  display: flex;
+  gap: 30px;
+}
+
+.menu2 a {
+  text-decoration: none;
+  color: var(--cor-links);
+  font-size: 0.95rem;
+  font-weight: 500;
+  position: relative;
+}
+
+.menu2 a.ativo {
+  color: var(--cor-rosa);
+  font-weight: 600;
+}
+
+.menu2 a.ativo::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 16px;
+  height: 2px;
+  background-color: var(--cor-rosa);
+  border-radius: 2px;
+}
+
+.modoclaro {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.btnmodo {
+  background: var(--cor-botao2-fundo);
+  border: none;
+  font-size: 1.2rem;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btnmodo:hover {
+  background: var(--cor-botao2-hover);
+}
+
+.btndowload{
+  background-color: var(--cor-rosa);
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.btndowload:hover {
+  background-color: var(--cor-rosa-hover);
+}
+
+.corpo {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 0 60px;
+}
+
+.boxdocorpo {
+  max-width: 850px;
+}
+
+.textin {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: var(--cor-texto);
+  margin-bottom: 40px;
+}
+
+.botoes {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+.botao {
+  background-color: var(--cor-rosa);
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.botao:hover {
+  background-color: var(--cor-rosa-hover);
+}
+
+.botao2 {
+  background-color: var(--cor-botao2-fundo);
+  color: var(--cor-botao2-texto);
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.botao2:hover {
+  background-color: var(--cor-botao2-hover);
+}
+.textin2 {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.textin3 {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--cor-texto);
+}
+
+.espaço {
+  width: 40px;
+  height: 2px;
+  background-color: var(--cor-linha);
+}
+
+
+
+.rodape {
+  padding: 40px 60px 30px;
+  margin-top: auto;
+}
+
+.espaço2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.textin4 {
+  font-size: 0.95rem;
+  color: #6C8296;
+}
+
+.link {
+  display: flex;
+  gap: 25px;
+}
+
+.link a {
+  text-decoration: none;
+  color: #1A2B3C;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: opacity 0.3s ease;
+}
+
+.link a:hover {
+  opacity: 0.7;
+}
+
+.espaço3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copia, .creditos {
+  font-size: 0.85rem;
+  color: #7B91A4;
+}
+.gabi{
+  position: absolute;
+  right: 190px;
+  top: 120px;
+  width: 356px;
+  height: 450px;
+}
+
+:root {
+  --cor-fundo: #A8D8F7;
+  --cor-textin: #5A6E7F;
+  --cor-titulo: #1A2B3C;
+  --cor-links: #4A607A;
+  --cor-rosa: #E94098;
+  --cor-rosa-hover: #d13082;
+  --cor-botao2-fundo: rgba(255, 255, 255, 0.25);
+  --cor-botao2-hover: rgba(255, 255, 255, 0.4);
+  --cor-botao2-texto: #1A2B3C;
+  --cor-espaço: rgba(95, 120, 143, 0.4);
+}
+
+body.modo-escuro {
+  --cor-fundo: #0F172A;
+  --cor-textin: #94A3B8;
+  --cor-titulo: #F8FAFC;
+  --cor-link: #CBD5E1;
+  --cor-rosa: #EC4899;
+  --cor-rosa-hover: #DB2777;
+  --cor-botao2-fundo: rgba(255, 255, 255, 0.08);
+  --cor-botao2-hover: rgba(255, 255, 255, 0.15);
+  --cor-botao2-texto: #F8FAFC;
+  --cor-linha: rgba(148, 163, 184, 0.4);
+}

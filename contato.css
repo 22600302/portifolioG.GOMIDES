@@ -1,0 +1,348 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body, div, span, h1, h2, p, a, button, input, textarea {
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 60px;
+}
+
+.titulo {
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  color: var(--cor-titulo-topo);
+}
+
+.icone {
+  font-style: italic;
+  font-weight: 900;
+}
+
+.menu {
+  display: flex;
+  gap: 30px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: var(--cor-links);
+  font-size: 0.95rem;
+  font-weight: 500;
+  position: relative;
+}
+
+.menu a.ativo {
+  color: var(--cor-rosa);
+  font-weight: 600;
+}
+
+.menu a.ativo::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 16px;
+  height: 2px;
+  background-color: var(--cor-rosa);
+  border-radius: 2px;
+}
+
+.modoclaro {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.btnmodo {
+  background-color: var(--cor-botao-tema-fundo);
+  border: none;
+  font-size: 1.2rem;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btnmodo:hover {
+  background-color: var(--cor-botao-tema-hover);
+}
+
+.btndowload {
+  background-color: var(--cor-rosa);
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.btndowload:hover {
+  background-color: var(--cor-rosa-hover);
+}
+
+.contato {
+  padding: 20px 60px 60px;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.boxcontato {
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+.coluna {
+  width: 50%;
+}
+
+.colunaformulario {
+  width: 50%;
+}
+
+.titulo2 {
+  color: var(--cor-rosa);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.titulo3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  color: var(--cor-titulo-grande);
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.15;
+}
+
+.frase {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--cor-texto);
+  margin-bottom: 40px;
+}
+
+.listacontato {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.itemcontato {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.iconebox {
+  width: 42px;
+  height: 42px;
+  background-color: var(--cor-icone-bg);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: var(--cor-rosa);
+  font-weight: 700;
+}
+
+.detalhecontato {
+  display: flex;
+  flex-direction: column;
+}
+
+.rotulo {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--cor-label);
+  margin-bottom: 3px;
+}
+
+.valor {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--cor-titulo-grande);
+  text-decoration: none;
+}
+
+.formulario {
+  background-color: var(--cor-cartao-fundo);
+  padding: 40px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.formulario h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  color: var(--cor-titulo-grande);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.campo label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--cor-label);
+}
+
+.campo input, .campo textarea {
+  background-color: var(--cor-input-fundo);
+  border: 1px solid var(--cor-input-borda);
+  border-radius: 6px;
+  padding: 14px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  color: var(--cor-input-texto);
+  outline: none;
+}
+
+.campo input::placeholder, .campo textarea::placeholder {
+  color: #94A3B8;
+}
+
+.campo input:focus, .campo textarea:focus {
+  border-color: var(--cor-rosa);
+}
+
+.btnenviar{
+  background-color: var(--cor-rosa);
+  color: #FFFFFF;
+  border: none;
+  padding: 14px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.btnenviar:hover {
+  background-color: var(--cor-rosa-hover);
+}
+
+@media (max-width: 900px) {
+  .bloco-contato {
+    flex-direction: column;
+  }
+  .coluna-info, .coluna-formulario {
+    width: 100%;
+  }
+}
+
+
+.rodape {
+  padding: 40px 60px 30px;
+  margin-top: auto;
+}
+
+.espaço {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.textin {
+  font-size: 0.95rem;
+  color: #6C8296;
+}
+
+.link {
+  display: flex;
+  gap: 25px;
+}
+
+.link a {
+  text-decoration: none;
+  color: #1A2B3C;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: opacity 0.3s ease;
+}
+
+.link a:hover {
+  opacity: 0.7;
+}
+
+.espaço2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copia, .creditos {
+  font-size: 0.85rem;
+  color: #7B91A4;
+}
+
+:root {
+  --cor-fundo: #A8D8F7;
+  --cor-texto: #5A6E7F;
+  --cor-titulo-topo: #1A2B3C;
+  --cor-links: #4A607A;
+  --cor-rosa: #E94098;
+  --cor-rosa-hover: #d13082;
+  --cor-titulo-grande: #1A2B3C;
+  --cor-cartao-fundo: #FFF5FA;
+  --cor-icone-bg: #FFE5F1;
+  --cor-input-fundo: #FFFFFF;
+  --cor-input-texto: #1A2B3C;
+  --cor-input-borda: rgba(0, 0, 0, 0.05);
+  --cor-label: #5A6E7F;
+  --cor-botao-tema-fundo: rgba(255, 255, 255, 0.25);
+  --cor-botao-tema-hover: rgba(255, 255, 255, 0.4);
+}
+
+body.modo-escuro {
+  --cor-fundo: #0F172A;
+  --cor-texto: #CBD5E1;
+  --cor-titulo-topo: #F8FAFC;
+  --cor-links: #94A3B8;
+  --cor-rosa: #EC4899;
+  --cor-rosa-hover: #DB2777;
+  --cor-titulo-grande: #F8FAFC;
+  --cor-cartao-fundo: #1E293B;
+  --cor-icone-bg: rgba(236, 72, 153, 0.15);
+  --cor-input-fundo: #0F172A;
+  --cor-input-texto: #F8FAFC;
+  --cor-input-borda: rgba(255, 255, 255, 0.1);
+  --cor-label: #94A3B8;
+  --cor-botao-tema-fundo: rgba(255, 255, 255, 0.08);
+  --cor-botao-tema-hover: rgba(255, 255, 255, 0.15);
+}
